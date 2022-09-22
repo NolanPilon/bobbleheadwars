@@ -673,6 +673,37 @@ Transform:
   m_Father: {fileID: 1378710075}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &577782219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 577782220}
+  m_Layer: 0
+  m_Name: Launcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &577782220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577782219}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0, z: 0.01227}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1681605856}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &587145851
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,6 +904,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f78b096b427d419f9918e4ae4fc4aec, type: 3}
+--- !u!1 &801343468 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ffe0c1ccb68ea2543a041c8ef4363a00,
+    type: 3}
+  m_PrefabInstance: {fileID: 396543226}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &801343469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801343468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4669f01802167f49b7992971b25b67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 872041205617040071, guid: 1bd02d5bca9ee8c4cab155cdb966e481,
+    type: 3}
+  launchPos: {fileID: 577782220}
 --- !u!1 &820109842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,6 +1547,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!4 &1681605856 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -5639509622783464918, guid: ffe0c1ccb68ea2543a041c8ef4363a00,
+    type: 3}
+  m_PrefabInstance: {fileID: 396543226}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1800856207
 GameObject:
   m_ObjectHideFlags: 0
