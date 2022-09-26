@@ -28,8 +28,10 @@ public class Gun : MonoBehaviour
     }
     void fireBullet() 
     {
+        //Spawn Bullet at Barrel Position
         GameObject bullet = Instantiate(bulletPrefab) as GameObject;
         bullet.transform.position = launchPos.position;
+        //Add Forward Force
         bullet.GetComponent<Rigidbody>().velocity = transform.parent.forward * 100;
     }
 }
