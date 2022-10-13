@@ -29,6 +29,11 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
+        if (player == null) 
+        {
+           return;
+        }
+
         currentUpgradeTime += Time.deltaTime;
         currentSpawnTime += Time.deltaTime;
 
@@ -89,9 +94,17 @@ public class GameManager : MonoBehaviour
                            newAlien.transform.position.y, player.transform.position.z);
                         newAlien.transform.LookAt(targetRotation);
 
+                        alienScript.onDestroy.AddListener(AlienDestroyed);
+
                     }
                 }
             }
         }
+    }
+
+    public void AlienDestroyed()
+    {
+        aliensOnScreen -= 1;
+        totalAliens -= 1;
     }
 }
