@@ -897,7 +897,7 @@ MonoBehaviour:
   gun: {fileID: 801343469}
   upgradeMaxTimeSpawn: 7.5
   maxAliensOnScreen: 10
-  totalAliens: 50
+  totalAliens: 20
   minSpawnTime: 0
   maxSpawnTime: 2
   aliensPerSpawn: 3
@@ -2877,6 +2877,7 @@ MonoBehaviour:
   - 0.1
   - 0.2
   - 0.3
+  spaceMarineFull: {fileID: 1495738081}
   marineBody: {fileID: 801343470}
   head: {fileID: 1293481431}
   layerMask:

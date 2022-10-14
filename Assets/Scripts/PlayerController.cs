@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -9,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private bool isHit = false;
     private float timeSinceHit = 0;
     private int hitNumber = -1;
+    private Vector3 playerVelocity;
     public float[] hitForce;
     private CharacterController playerController;
     private DeathParticles deathParticles;
@@ -38,7 +40,22 @@ public class PlayerController : MonoBehaviour
                 timeSinceHit = 0;
             }
         }
-            
+        if (Input.GetKeyDown(KeyCode.K)) 
+        {
+            Die();
+        }
+
+        //Jump
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
+            playerVelocity.y = (0.15f);
+        }
+
+        if (playerVelocity.y > 0) 
+        {
+            playerVelocity.y -= 0.08f * Time.deltaTime;
+            playerController.Move(playerVelocity);
+        }
     }
 
     private void FixedUpdate()
