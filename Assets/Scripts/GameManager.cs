@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] spawnPoints;
     public GameObject alien;
     public GameObject upgradePrefab;
+    public GameObject deathFloor;
     public Gun gun;
     public float upgradeMaxTimeSpawn = 7.5f;
     private bool spawnedUpgrade = false;
@@ -95,7 +96,7 @@ public class GameManager : MonoBehaviour
                         newAlien.transform.LookAt(targetRotation);
 
                         alienScript.onDestroy.AddListener(AlienDestroyed);
-
+                        alienScript.GetDeathParticles().SetDeathFloor(deathFloor);
                     }
                 }
             }
