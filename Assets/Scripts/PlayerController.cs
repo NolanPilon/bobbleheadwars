@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     public float[] hitForce;
     private CharacterController playerController;
     public Rigidbody marineBody;
-    private bool isDead = false;
     public Rigidbody head;
     public LayerMask layerMask;
     private Vector3 currentLookTarget = Vector3.zero;
